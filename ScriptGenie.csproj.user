@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Controls\Armor\ArmorGenerator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controls\Item\ItemGenerator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controls\Mobile\MobileGenerator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controls\Quest\ChainGenerator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controls\Quest\QuestGenerator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Controls\Weapon\WeaponGenerator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="vstudio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
