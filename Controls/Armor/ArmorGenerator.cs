@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ScriptGenie.UltimaSDK;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,16 @@ namespace ScriptGenie.Controls.ArmorGenerator
 
         // Armor Type Details (e.g., Tribal Mask 1, Plate Helm Type 1, etc.)
         public string ArmorTypeDetails => armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.SelectedItem?.ToString();
+
+        // Layer Type
+        public string LayerType => armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.SelectedItem?.ToString();
+
+        // Armor Resistances
+        public int PhysicalResistance => (int)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist.Value;
+        public int FireResistance => (int)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist.Value;
+        public int ColdResistance => (int)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist.Value;
+        public int PoisonResistance => (int)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist.Value;
+        public int EnergyResistance => (int)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist.Value;
 
         public string BaseArmorType => armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_baseArmor.SelectedItem?.ToString();
         public string ResourceType => armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_craftResourceType.SelectedItem?.ToString();
@@ -276,7 +287,7 @@ namespace ScriptGenie.Controls.ArmorGenerator
         // Dictionary to map Tribal Chest types to their ItemIDs
         private static readonly Dictionary<string, string> TribalChestItemIDs = new Dictionary<string, string>
         {
-            ["Tribal Chest 1 (0x144F)"] = "0x144F",
+            ["Tribal Chest 1 (0x154C)"] = "0x154C",
             ["Tribal Chest 2 (0x1454)"] = "0x1454"
         };
 
@@ -334,16 +345,21 @@ namespace ScriptGenie.Controls.ArmorGenerator
         private float zoomFactor = 1.0f;
         private Bitmap backgroundImage;
         private Bitmap currentArmorImage;
+        private int CurrentItemID { get; set; }
 
         public armorGenerator()
         {
             InitializeComponent();
+
             // TabControl Hidden On Load
-            armorGenerator_opacityPanel_darkTabControl.TabPages.Remove(armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.TabPages.Remove(armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties);
+
             // Stop Control Flicker
             ControlHelper.EnableDoubleBuffering(this);
+
             // OpacityPanel Is @ 30%
             armorGenerator_opacityPanel.Opacity = 0.3f;
+
             // ComboBox Configuration
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_baseArmor.Items.AddRange(new object[] { "Plate", "Chainmail", "Ringmail", "Studded", "Leather", "Bone", "Dragon", "Tribal" });
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_baseArmor.SelectedIndexChanged += armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_baseArmor_SelectedIndexChanged;
@@ -358,6 +374,26 @@ namespace ScriptGenie.Controls.ArmorGenerator
                                                                                                                                                                    /*Wooden.....*/  "RegularWood", "OakWood", "AshWood", "YewWood", "HeartWood", "BloodWood", "FrostWood",
                                                                                                                                                                    /*Stone......*/  "Granite", "DullCopperGranite", "ShadowIronGranite", "CopperGranite", "BronzeGranite", "GoldGranite", "AgapiteGranite", "VeriteGranite", "ValoriteGranite",
                                                                                                                                                                    /*Rock.......*/  "BlackRock" });
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_craftResourceType.SelectedIndexChanged += armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_craftResourceType_SelectedIndexChanged;
+
+            // Populate the Layer ComboBox
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.Items.AddRange(new object[]
+            {
+                "Neck",
+                "Helm",
+                "Gloves",
+                "Arms",
+                "InnerTorso",
+                "OuterTorso",
+                "InnerLegs",
+                "OuterLegs",
+                "Shoes",
+                "TwoHanded"
+            });
+
+            // Set a default layer
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.SelectedIndex = 0;
+
             // Set the Multiple Armor Type List ComboBox to be invisible initially
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.Visible = false;
 
@@ -368,11 +404,18 @@ namespace ScriptGenie.Controls.ArmorGenerator
             // Load the background image
             LoadBackgroundImage();
 
+            // Set default values for resistances
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist.Value = 0;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist.Value = 0;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist.Value = 0;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist.Value = 0;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist.Value = 0;
+
             // TabPages Configuration
-            armorGenerator_opacityPanel_darkTabControl.DrawMode = TabDrawMode.OwnerDrawFixed;
-            armorGenerator_opacityPanel_darkTabControl.ItemSize = new Size(140, 30);
-            armorGenerator_opacityPanel_darkTabControl.SizeMode = TabSizeMode.Fixed;
-            armorGenerator_opacityPanel_darkTabControl.DrawItem += ArmorGenerator_OpacityPanel_darkTabControl_DrawItem;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.DrawMode = TabDrawMode.OwnerDrawFixed;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.ItemSize = new Size(140, 30);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.SizeMode = TabSizeMode.Fixed;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.DrawItem += ArmorGenerator_OpacityPanel_darkTabControl_DrawItem;
         }
 
         private void LoadBackgroundImage()
@@ -380,7 +423,7 @@ namespace ScriptGenie.Controls.ArmorGenerator
             try
             {
                 // Load the background image from Resources.resx
-                backgroundImage = new Bitmap(Properties.Resources.bkd_003); // Replace 'bkd_003' with the name of your resource
+                backgroundImage = new Bitmap(Properties.Resources.bkd_003);
             }
             catch (Exception ex)
             {
@@ -418,7 +461,9 @@ namespace ScriptGenie.Controls.ArmorGenerator
         {
             try
             {
+                CurrentItemID = itemID;
                 Bitmap artBitmap = ScriptGenie.UltimaSDK.Art.GetStatic(itemID);
+
                 if (artBitmap != null)
                 {
                     Bitmap displayBitmap = new Bitmap(artBitmap);
@@ -461,53 +506,21 @@ namespace ScriptGenie.Controls.ArmorGenerator
             if (bitmap == null)
                 return null;
 
-            Bitmap coloredBitmap = new Bitmap(bitmap.Width, bitmap.Height, PixelFormat.Format32bppArgb);
+            var hueObj = ScriptGenie.UltimaSDK.Hues.GetHue(hue);
+            if (hueObj == null)
+                return bitmap;
 
-            try
+            var itemTable = ScriptGenie.UltimaSDK.TileData.ItemTable;
+
+            // Ensure CurrentItemID is within bounds
+            bool partialHue = false;
+            if (CurrentItemID >= 0 && CurrentItemID < itemTable.Length)
             {
-                using (Graphics g = Graphics.FromImage(coloredBitmap))
-                {
-                    g.DrawImage(bitmap, Point.Empty);
-                }
-
-                BitmapData bd = coloredBitmap.LockBits(new Rectangle(0, 0, coloredBitmap.Width, coloredBitmap.Height), ImageLockMode.ReadWrite, PixelFormat.Format32bppArgb);
-
-                int bytes = Math.Abs(bd.Stride) * coloredBitmap.Height;
-                byte[] rgbValues = new byte[bytes];
-
-                Marshal.Copy(bd.Scan0, rgbValues, 0, bytes);
-
-                ScriptGenie.UltimaSDK.Hue hueObj = ScriptGenie.UltimaSDK.Hues.GetHue(hue);
-
-                for (int i = 0; i < rgbValues.Length; i += 4)
-                {
-                    byte b = rgbValues[i];
-                    byte g = rgbValues[i + 1];
-                    byte r = rgbValues[i + 2];
-                    byte a = rgbValues[i + 3];
-
-                    if (a != 0)
-                    {
-                        int index = (r >> 3) & 0x1F;
-                        if (index >= 0 && index < hueObj.Colors.Length)
-                        {
-                            short colorEntry = hueObj.Colors[index];
-                            rgbValues[i] = (byte)((colorEntry & 0x1F) * 8); // B
-                            rgbValues[i + 1] = (byte)(((colorEntry >> 5) & 0x1F) * 8); // G
-                            rgbValues[i + 2] = (byte)(((colorEntry >> 10) & 0x1F) * 8); // R
-                        }
-                    }
-                }
-
-                Marshal.Copy(rgbValues, 0, bd.Scan0, bytes);
-                coloredBitmap.UnlockBits(bd);
-            }
-            catch (Exception ex)
-            {
-                coloredBitmap.Dispose();
-                throw new Exception($"Error applying hue: {ex.Message}", ex);
+                partialHue = itemTable[CurrentItemID].Flags.HasFlag(TileFlag.PartialHue);
             }
 
+            var coloredBitmap = new Bitmap(bitmap);
+            hueObj.ApplyTo(coloredBitmap, partialHue);
             return coloredBitmap;
         }
 
@@ -516,6 +529,12 @@ namespace ScriptGenie.Controls.ArmorGenerator
             string selectedArmorType = armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkTextBox_armorType.SelectedItem?.ToString();
             string selectedArmorTypeDetails = armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.SelectedItem?.ToString();
             int hue = (int)armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue.Value;
+
+            // Check if selectedArmorType is valid
+            if (string.IsNullOrEmpty(selectedArmorType))
+            {
+                return;
+            }
 
             if (selectedArmorTypeDetails != null && ArmorTypeItemIDMappings.TryGetValue(selectedArmorType, out var itemIDMappings))
             {
@@ -526,7 +545,7 @@ namespace ScriptGenie.Controls.ArmorGenerator
                     DisplayArtPreview(itemID, hue);
                 }
             }
-            else if (Exporters.Armor.ArmorTypeItemIDs.TryGetValue(selectedArmorType, out string itemIDStr))
+            else if (Exporters.Armor.ArmorTypeItemIDs.TryGetValue(selectedArmorType, out string itemIDStr) && !string.IsNullOrEmpty(itemIDStr))
             {
                 int itemID = Convert.ToInt32(itemIDStr, 16);
                 DisplayArtPreview(itemID, hue);
@@ -537,8 +556,11 @@ namespace ScriptGenie.Controls.ArmorGenerator
         {
             string selectedArmorType = armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkTextBox_armorType.SelectedItem?.ToString();
 
-            InitializeArmorTypeDetailsComboBox(selectedArmorType);
-            UpdatePreview();
+            if (!string.IsNullOrEmpty(selectedArmorType))
+            {
+                InitializeArmorTypeDetailsComboBox(selectedArmorType);
+                UpdatePreview();
+            }
         }
 
         private void armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList_SelectedIndexChanged(object sender, EventArgs e)
@@ -548,6 +570,18 @@ namespace ScriptGenie.Controls.ArmorGenerator
 
         private void armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue_ValueChanged(object sender, EventArgs e)
         {
+            UpdatePreview();
+        }
+
+        private void armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_craftResourceType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedResource = armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_craftResourceType.SelectedItem?.ToString();
+
+            if (selectedResource != null && Exporters.Armor.ResourceHues.TryGetValue(selectedResource, out int hue))
+            {
+                armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue.Value = hue;
+            }
+
             UpdatePreview();
         }
 
@@ -580,7 +614,6 @@ namespace ScriptGenie.Controls.ArmorGenerator
                     armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkTextBox_armorType.SelectedIndex = 0;
                 }
             }
-            UpdatePreview();
         }
 
         private void ArmorGenerator_OpacityPanel_darkTabControl_DrawItem(object sender, DrawItemEventArgs e)
@@ -617,14 +650,14 @@ namespace ScriptGenie.Controls.ArmorGenerator
             if (armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkCheckBox_armorSet.Checked)
             {
                 // Show the tab if checkbox is checked
-                armorGenerator_opacityPanel_darkTabControl.TabPages.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties);
+                armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.TabPages.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties);
             }
             else
             {
                 // Clears the controls when unchecked
                 armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties.Controls.Clear();
                 // Hide the tab if checkbox is unchecked
-                armorGenerator_opacityPanel_darkTabControl.TabPages.Remove(armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties);
+                armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.TabPages.Remove(armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties);
             }
         }
 

@@ -93,6 +93,26 @@ namespace ScriptGenie.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bkd_004 {
+            get {
+                object obj = ResourceManager.GetObject("bkd_004", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bkd_005 {
+            get {
+                object obj = ResourceManager.GetObject("bkd_005", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hdr_001_ag {
             get {
                 object obj = ResourceManager.GetObject("hdr_001_ag", resourceCulture);

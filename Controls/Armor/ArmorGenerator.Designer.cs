@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             armorGenerator_pictureBoxHeader = new PictureBox();
-            armorGenerator_opacityPanel = new OpacityPanel();
-            armorGenerator_opacityPanel_darkTabControl = new DarkTabControl();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB = new DarkTabControl();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor = new TabPage();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA = new OpacityPanel();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType = new Label();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType = new DarkComboBox();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList = new DarkComboBox();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorType = new Label();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkTextBox_armorType = new DarkComboBox();
@@ -52,36 +53,37 @@
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_opacityPanel_armorTypePreview = new OpacityPanel();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_darkTextBox_scriptName = new DarkTextBox();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_label_scriptName = new Label();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances = new TabPage();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB = new OpacityPanel();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist = new Label();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist = new Label();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist = new Label();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist = new Label();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist = new Label();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist = new DarkNumericUpDown();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist = new DarkNumericUpDown();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist = new DarkNumericUpDown();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist = new DarkNumericUpDown();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist = new DarkNumericUpDown();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes = new TabPage();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB = new OpacityPanel();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration = new DarkNumericUpDown();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration = new DarkNumericUpDown();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease = new DarkNumericUpDown();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaRegeneration = new Label();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointRegeneration = new Label();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaIncrease = new Label();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease = new DarkNumericUpDown();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointIncrease = new Label();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaRegeneration = new Label();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration = new DarkNumericUpDown();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaIncrease = new Label();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease = new DarkNumericUpDown();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlC = new OpacityPanel();
             armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties = new TabPage();
+            armorGenerator_opacityPanel = new OpacityPanel();
             ((System.ComponentModel.ISupportInitialize)armorGenerator_pictureBoxHeader).BeginInit();
-            armorGenerator_opacityPanel.SuspendLayout();
-            armorGenerator_opacityPanel_darkTabControl.SuspendLayout();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.SuspendLayout();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor.SuspendLayout();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue).BeginInit();
             ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_weight).BeginInit();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances.SuspendLayout();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist).BeginInit();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.SuspendLayout();
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease).BeginInit();
+            armorGenerator_opacityPanel.SuspendLayout();
             SuspendLayout();
             // 
             // armorGenerator_pictureBoxHeader
@@ -94,28 +96,18 @@
             armorGenerator_pictureBoxHeader.TabIndex = 1;
             armorGenerator_pictureBoxHeader.TabStop = false;
             // 
-            // armorGenerator_opacityPanel
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB
             // 
-            armorGenerator_opacityPanel.BackColor = Color.Transparent;
-            armorGenerator_opacityPanel.Controls.Add(armorGenerator_opacityPanel_darkTabControl);
-            armorGenerator_opacityPanel.Dock = DockStyle.Bottom;
-            armorGenerator_opacityPanel.Location = new Point(0, 71);
-            armorGenerator_opacityPanel.Name = "armorGenerator_opacityPanel";
-            armorGenerator_opacityPanel.Opacity = 0.5F;
-            armorGenerator_opacityPanel.Size = new Size(812, 478);
-            armorGenerator_opacityPanel.TabIndex = 2;
-            // 
-            // armorGenerator_opacityPanel_darkTabControl
-            // 
-            armorGenerator_opacityPanel_darkTabControl.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor);
-            armorGenerator_opacityPanel_darkTabControl.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes);
-            armorGenerator_opacityPanel_darkTabControl.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties);
-            armorGenerator_opacityPanel_darkTabControl.Font = new Font("Segoe UI", 11F);
-            armorGenerator_opacityPanel_darkTabControl.Location = new Point(26, 24);
-            armorGenerator_opacityPanel_darkTabControl.Name = "armorGenerator_opacityPanel_darkTabControl";
-            armorGenerator_opacityPanel_darkTabControl.SelectedIndex = 0;
-            armorGenerator_opacityPanel_darkTabControl.Size = new Size(897, 403);
-            armorGenerator_opacityPanel_darkTabControl.TabIndex = 0;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.Font = new Font("Segoe UI", 11F);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.Location = new Point(26, 24);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.SelectedIndex = 0;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.Size = new Size(897, 403);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.TabIndex = 0;
             // 
             // armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor
             // 
@@ -137,6 +129,8 @@
             // 
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA.AutoScroll = true;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA.BackColor = Color.Transparent;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorType);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkTextBox_armorType);
@@ -160,6 +154,31 @@
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA.Size = new Size(889, 321);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA.TabIndex = 13;
             // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType.AutoSize = true;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType.BackColor = Color.Transparent;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType.ForeColor = Color.LightSteelBlue;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType.Location = new Point(607, 197);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType.Size = new Size(82, 20);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType.TabIndex = 24;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType.Text = "Layer Type:";
+            // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.BackColor = Color.Black;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.DrawMode = DrawMode.OwnerDrawFixed;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.DropDownStyle = ComboBoxStyle.DropDownList;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.FlatStyle = FlatStyle.Flat;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.ForeColor = Color.White;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.FormattingEnabled = true;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.ItemHeight = 20;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.Location = new Point(695, 197);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.Size = new Size(165, 26);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType.TabIndex = 23;
+            // 
             // armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList
             // 
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.BackColor = Color.Black;
@@ -177,6 +196,7 @@
             // armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorType
             // 
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorType.AutoSize = true;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorType.BackColor = Color.Transparent;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorType.ForeColor = Color.LightSteelBlue;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorType.Location = new Point(30, 93);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorType.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorType";
@@ -213,6 +233,7 @@
             // armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorName
             // 
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorName.AutoSize = true;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorName.BackColor = Color.Transparent;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorName.ForeColor = Color.LightSteelBlue;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorName.Location = new Point(30, 19);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorName.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorName";
@@ -258,7 +279,7 @@
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue.BorderStyle = BorderStyle.FixedSingle;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue.ForeColor = Color.White;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue.Location = new Point(132, 233);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue.Maximum = new decimal(new int[] { 2430, 0, 0, 0 });
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue.Minimum = new decimal(new int[] { 1, 0, 0, int.MinValue });
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue";
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue.Size = new Size(180, 27);
@@ -308,7 +329,7 @@
             // armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_craftResourceType
             // 
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_craftResourceType.AutoSize = true;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_craftResourceType.BackColor = Color.Black;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_craftResourceType.BackColor = Color.Transparent;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_craftResourceType.ForeColor = Color.LightSteelBlue;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_craftResourceType.Location = new Point(11, 162);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_craftResourceType.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_craftResourceType";
@@ -329,6 +350,7 @@
             // armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorHue
             // 
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorHue.AutoSize = true;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorHue.BackColor = Color.Transparent;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorHue.ForeColor = Color.LightSteelBlue;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorHue.Location = new Point(34, 235);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorHue.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorHue";
@@ -339,7 +361,7 @@
             // armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_weight
             // 
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_weight.AutoSize = true;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_weight.BackColor = Color.Black;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_weight.BackColor = Color.Transparent;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_weight.ForeColor = Color.LightSteelBlue;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_weight.Location = new Point(60, 196);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_weight.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_weight";
@@ -350,6 +372,7 @@
             // armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_baseArmor
             // 
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_baseArmor.AutoSize = true;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_baseArmor.BackColor = Color.Transparent;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_baseArmor.ForeColor = Color.LightSteelBlue;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_baseArmor.Location = new Point(30, 55);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_baseArmor.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_baseArmor";
@@ -390,159 +413,164 @@
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_label_scriptName.TabIndex = 9;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_label_scriptName.Text = "Script Name:";
             // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances.BackColor = Color.Transparent;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances.BackgroundImage = Properties.Resources.bkd_004;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances.BackgroundImageLayout = ImageLayout.Stretch;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances.Location = new Point(4, 25);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances.Padding = new Padding(3);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances.Size = new Size(889, 374);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances.TabIndex = 1;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances.Text = "Armor Resistances";
+            // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.BackColor = Color.Transparent;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Location = new Point(0, 53);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Opacity = 0.3F;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.Size = new Size(889, 321);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.TabIndex = 0;
+            // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist.AutoSize = true;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist.BackColor = Color.Transparent;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist.ForeColor = Color.LightSteelBlue;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist.Location = new Point(17, 214);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist.Size = new Size(99, 20);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist.TabIndex = 22;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist.Text = "Energy Resist:";
+            // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist.AutoSize = true;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist.BackColor = Color.Transparent;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist.ForeColor = Color.LightSteelBlue;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist.Location = new Point(19, 177);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist.Size = new Size(97, 20);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist.TabIndex = 21;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist.Text = "Poison Resist:";
+            // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist.AutoSize = true;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist.BackColor = Color.Transparent;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist.ForeColor = Color.LightSteelBlue;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist.Location = new Point(38, 103);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist.Size = new Size(78, 20);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist.TabIndex = 20;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist.Text = "Fire Resist:";
+            // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist.AutoSize = true;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist.BackColor = Color.Transparent;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist.ForeColor = Color.LightSteelBlue;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist.Location = new Point(31, 140);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist.Size = new Size(85, 20);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist.TabIndex = 19;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist.Text = "Cold Resist:";
+            // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist.AutoSize = true;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist.BackColor = Color.Transparent;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist.ForeColor = Color.LightSteelBlue;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist.Location = new Point(10, 66);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist.Size = new Size(106, 20);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist.TabIndex = 18;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist.Text = "Physical Resist:";
+            // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist.BackColor = Color.Black;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist.BorderStyle = BorderStyle.FixedSingle;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist.ForeColor = Color.White;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist.Location = new Point(122, 212);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist.Size = new Size(180, 27);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist.TabIndex = 4;
+            // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist.BackColor = Color.Black;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist.BorderStyle = BorderStyle.FixedSingle;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist.ForeColor = Color.White;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist.Location = new Point(122, 175);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist.Size = new Size(180, 27);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist.TabIndex = 3;
+            // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist.BackColor = Color.Black;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist.BorderStyle = BorderStyle.FixedSingle;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist.ForeColor = Color.White;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist.Location = new Point(122, 138);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist.Size = new Size(180, 27);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist.TabIndex = 2;
+            // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist.BackColor = Color.Black;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist.BorderStyle = BorderStyle.FixedSingle;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist.ForeColor = Color.White;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist.Location = new Point(122, 101);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist.Size = new Size(180, 27);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist.TabIndex = 1;
+            // 
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist
+            // 
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist.BackColor = Color.Black;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist.BorderStyle = BorderStyle.FixedSingle;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist.ForeColor = Color.White;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist.Location = new Point(122, 64);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist.Size = new Size(180, 27);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist.TabIndex = 0;
+            // 
             // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes
             // 
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.BackColor = Color.Transparent;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.BackgroundImage = Properties.Resources.bkd_002;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.BackgroundImage = Properties.Resources.bkd_005;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.BackgroundImageLayout = ImageLayout.Stretch;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlC);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.Location = new Point(4, 25);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes";
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.Padding = new Padding(3);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.Size = new Size(889, 374);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.TabIndex = 1;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.TabIndex = 3;
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.Text = "Armor Attributes";
             // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB
+            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlC
             // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.BackColor = Color.Transparent;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaRegeneration);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointRegeneration);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaIncrease);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointIncrease);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaRegeneration);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaIncrease);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Location = new Point(0, 53);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Opacity = 0.3F;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.Size = new Size(889, 321);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.TabIndex = 0;
-            // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration
-            // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration.BackColor = Color.Black;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration.BorderStyle = BorderStyle.FixedSingle;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration.ForeColor = Color.White;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration.Location = new Point(257, 147);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration.Size = new Size(76, 27);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration.TabIndex = 29;
-            // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration
-            // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration.BackColor = Color.Black;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration.BorderStyle = BorderStyle.FixedSingle;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration.ForeColor = Color.White;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration.Location = new Point(257, 234);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration.Size = new Size(76, 27);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration.TabIndex = 25;
-            // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease
-            // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease.BackColor = Color.Black;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease.BorderStyle = BorderStyle.FixedSingle;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease.ForeColor = Color.White;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease.Location = new Point(217, 33);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease.Size = new Size(76, 27);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease.TabIndex = 19;
-            // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaRegeneration
-            // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaRegeneration.AutoSize = true;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaRegeneration.ForeColor = Color.LightSteelBlue;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaRegeneration.Location = new Point(94, 236);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaRegeneration.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaRegeneration";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaRegeneration.Size = new Size(159, 20);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaRegeneration.TabIndex = 24;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaRegeneration.Text = "Stamina Regeneration:";
-            // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointRegeneration
-            // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointRegeneration.AutoSize = true;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointRegeneration.ForeColor = Color.LightSteelBlue;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointRegeneration.Location = new Point(52, 72);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointRegeneration.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointRegeneration";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointRegeneration.Size = new Size(162, 20);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointRegeneration.TabIndex = 20;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointRegeneration.Text = "Hit Point Regeneration:";
-            // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaIncrease
-            // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaIncrease.AutoSize = true;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaIncrease.ForeColor = Color.LightSteelBlue;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaIncrease.Location = new Point(147, 112);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaIncrease.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaIncrease";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaIncrease.Size = new Size(107, 20);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaIncrease.TabIndex = 26;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaIncrease.Text = "Mana Increase:";
-            // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease
-            // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease.BackColor = Color.Black;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease.BorderStyle = BorderStyle.FixedSingle;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease.ForeColor = Color.White;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease.Location = new Point(257, 197);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease.Size = new Size(76, 27);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease.TabIndex = 23;
-            // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointIncrease
-            // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointIncrease.AutoSize = true;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointIncrease.ForeColor = Color.LightSteelBlue;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointIncrease.Location = new Point(87, 35);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointIncrease.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointIncrease";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointIncrease.Size = new Size(127, 20);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointIncrease.TabIndex = 18;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointIncrease.Text = "Hit Point Increase:";
-            // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaRegeneration
-            // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaRegeneration.AutoSize = true;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaRegeneration.ForeColor = Color.LightSteelBlue;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaRegeneration.Location = new Point(112, 149);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaRegeneration.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaRegeneration";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaRegeneration.Size = new Size(142, 20);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaRegeneration.TabIndex = 28;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaRegeneration.Text = "Mana Regeneration:";
-            // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration
-            // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration.BackColor = Color.Black;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration.BorderStyle = BorderStyle.FixedSingle;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration.ForeColor = Color.White;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration.Location = new Point(217, 70);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration.Size = new Size(76, 27);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration.TabIndex = 21;
-            // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaIncrease
-            // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaIncrease.AutoSize = true;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaIncrease.ForeColor = Color.LightSteelBlue;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaIncrease.Location = new Point(129, 199);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaIncrease.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaIncrease";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaIncrease.Size = new Size(124, 20);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaIncrease.TabIndex = 22;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaIncrease.Text = "Stamina Increase:";
-            // 
-            // armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease
-            // 
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease.BackColor = Color.Black;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease.BorderStyle = BorderStyle.FixedSingle;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease.ForeColor = Color.White;
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease.Location = new Point(257, 110);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease";
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease.Size = new Size(76, 27);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease.TabIndex = 27;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlC.BackColor = Color.Transparent;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlC.Location = new Point(0, 53);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlC.Name = "armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlC";
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlC.Opacity = 0.3F;
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlC.Size = new Size(889, 321);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlC.TabIndex = 0;
             // 
             // armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties
             // 
@@ -554,6 +582,17 @@
             armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties.TabIndex = 2;
             armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties.Text = "Set Properties";
             // 
+            // armorGenerator_opacityPanel
+            // 
+            armorGenerator_opacityPanel.BackColor = Color.Transparent;
+            armorGenerator_opacityPanel.Controls.Add(armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB);
+            armorGenerator_opacityPanel.Dock = DockStyle.Bottom;
+            armorGenerator_opacityPanel.Location = new Point(0, 71);
+            armorGenerator_opacityPanel.Name = "armorGenerator_opacityPanel";
+            armorGenerator_opacityPanel.Opacity = 0.5F;
+            armorGenerator_opacityPanel.Size = new Size(812, 478);
+            armorGenerator_opacityPanel.TabIndex = 2;
+            // 
             // armorGenerator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -564,23 +603,23 @@
             Name = "armorGenerator";
             Size = new Size(812, 549);
             ((System.ComponentModel.ISupportInitialize)armorGenerator_pictureBoxHeader).EndInit();
-            armorGenerator_opacityPanel.ResumeLayout(false);
-            armorGenerator_opacityPanel_darkTabControl.ResumeLayout(false);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB.ResumeLayout(false);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor.ResumeLayout(false);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor.PerformLayout();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA.ResumeLayout(false);
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue).EndInit();
             ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_weight).EndInit();
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances.ResumeLayout(false);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.ResumeLayout(false);
+            armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist).EndInit();
+            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist).EndInit();
+            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist).EndInit();
+            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist).EndInit();
+            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist).EndInit();
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes.ResumeLayout(false);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.ResumeLayout(false);
-            armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration).EndInit();
-            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration).EndInit();
-            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease).EndInit();
-            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease).EndInit();
-            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration).EndInit();
-            ((System.ComponentModel.ISupportInitialize)armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease).EndInit();
+            armorGenerator_opacityPanel.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -590,16 +629,17 @@
         private PictureBox armorGenerator_pictureBoxHeader;
         private TabPage tabPage5;
         private TabPage tabPage6;
-        private OpacityPanel armorGenerator_opacityPanel;
-        private DarkTabControl armorGenerator_opacityPanel_darkTabControl;
+        private DarkTabControl armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlB;
         private TabPage armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor;
-        private TabPage armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes;
-        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_label_scriptName;
-        private DarkTextBox armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_darkTextBox_scriptName;
         private OpacityPanel armorGenerator_opacityPanel_darkTabControl_tabPage_armorProperties_opacityPanel_controlA;
-        private OpacityPanel armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB;
+        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_layerType;
+        private DarkComboBox armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_layerType;
+        private DarkComboBox armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList;
+        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorType;
+        private DarkComboBox armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkTextBox_armorType;
+        private DarkTextBox armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkTextBox_armorName;
+        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorName;
         private DarkCheckBox armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkCheckBox_armorSet;
-        private TabPage armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties;
         private DarkComboBox armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_lootType;
         private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue;
         private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_weight;
@@ -610,23 +650,24 @@
         private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorHue;
         private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_weight;
         private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_baseArmor;
-        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorName;
-        private DarkTextBox armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkTextBox_armorName;
-        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointIncrease;
-        private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointIncrease;
-        private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_hitPointRegeneration;
-        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_hitPointRegeneration;
-        private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaRegeneration;
-        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaRegeneration;
-        private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_staminaIncrease;
-        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_staminaIncrease;
-        private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaRegeneration;
-        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaRegeneration;
-        private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_darkNumericUpDown_manaIncrease;
-        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlB_label_manaIncrease;
-        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_label_armorType;
-        private DarkComboBox armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkTextBox_armorType;
         private OpacityPanel armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_opacityPanel_armorTypePreview;
-        private DarkComboBox armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList;
+        private DarkTextBox armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_darkTextBox_scriptName;
+        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_label_scriptName;
+        private TabPage armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances;
+        private OpacityPanel armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB;
+        private TabPage armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes;
+        private TabPage armorGenerator_opacityPanel_darkTabControl_tabPage_setProperties;
+        private OpacityPanel armorGenerator_opacityPanel;
+        private OpacityPanel armorGenerator_opacityPanel_darkTabControl_tabPage_armorAttributes_opacityPanel_controlC;
+        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_energyResist;
+        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_poisonResist;
+        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_fireResist;
+        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_coldResist;
+        private Label armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_label_physicalResist;
+        private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_energyResist;
+        private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_poisonResist;
+        private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_coldResist;
+        private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_fireResist;
+        private DarkNumericUpDown armorGenerator_opacityPanel_darkTabControl_tabPage_armorResistances_opacityPanel_controlB_darkNumericUpDown_physicalResist;
     }
 }

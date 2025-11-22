@@ -49,51 +49,69 @@ namespace ScriptGenie.Exporters
             ["BlueScales"] = "CraftResource.BlueScales"
         };
 
+        // Map ResourceType to Hue
+        public static readonly Dictionary<string, int> ResourceHues = new Dictionary<string, int>
+        {
+            ["Iron"] = 0,
+            ["DullCopper"] = 0x973,
+            ["ShadowIron"] = 0x966,
+            ["Copper"] = 0x96D,
+            ["Bronze"] = 0x972,
+            ["Gold"] = 0x8A5,
+            ["Agapite"] = 0x979,
+            ["Verite"] = 0x89F,
+            ["Valorite"] = 0x8AB,
+            ["RegularLeather"] = 0,
+            ["SpinedLeather"] = 0x8AC,
+            ["HornedLeather"] = 0x845,
+            ["BarbedLeather"] = 0x851,
+            ["Bone"] = 0,
+            ["RedScales"] = 0x66D,
+            ["YellowScales"] = 0x8A8,
+            ["BlackScales"] = 0x455,
+            ["GreenScales"] = 0x851,
+            ["WhiteScales"] = 0x8FD,
+            ["BlueScales"] = 0x8B0
+        };
+
         // Map ArmorType to ItemID
         public static readonly Dictionary<string, string> ArmorTypeItemIDs = new Dictionary<string, string>
         {
-            ["Plate Helm"] = "0x1408",      //0x1408, 0x1409, 0x140A, 0x140B, 0x140C, 0x140D, 0x140E, 0x140F, 0x1412, 0x1419
+            ["Plate Helm"] = "0x1408",
             ["Plate Gorget"] = "0x1413",
-            ["Plate Chest"] = "0x1415",     //0x1415, 0x1416
-            ["Plate Arms"] = "0x1410",      //0x1410, 0x1417
-            ["Plate Gloves"] = "0x1413",    //0x1414, 0x1418   
-            ["Plate Legs"] = "0x1411",      //0x1411, 0x141A
-
-            ["Chain Chest"] = "0x13BF",     //0x13BF, 0x13C4
-            ["Chain Legs"] = "0x13BE",      //0x13BE, 0x13C3
-            ["Chain Coif"] = "0x13BB",      //0x13BB, 0x13C0
-
-            ["Ringmail Chest"] = "0x13EC",  //0x13EC, 0x13ED
-            ["Ringmail Legs"] = "0x13F0",   //0x13F0, 0x13F1
-            ["Ringmail Gloves"] = "0x13EB", //0x13EB, 0x13F2
-
-            ["Leather Chest"] = "0x13CC",   //0x13CC, 0x13D3
-            ["Leather Legs"] = "0x13CB",    //0x13CB, 0x13D2
+            ["Plate Chest"] = "0x1415",
+            ["Plate Arms"] = "0x1410",
+            ["Plate Gloves"] = "0x1413",
+            ["Plate Legs"] = "0x1411",
+            ["Chain Chest"] = "0x13BF",
+            ["Chain Legs"] = "0x13BE",
+            ["Chain Coif"] = "0x13BB",
+            ["Ringmail Chest"] = "0x13EC",
+            ["Ringmail Legs"] = "0x13F0",
+            ["Ringmail Gloves"] = "0x13EB",
+            ["Leather Chest"] = "0x13CC",
+            ["Leather Legs"] = "0x13CB",
             ["Leather Gorget"] = "0x13C7",
-            ["Leather Gloves"] = "0x13C6",  //0x13C6, 0x13CE
-            ["Leather Cap"] = "0x1DB9",     //0x1DB9, 0x1DBA
-
-            ["Studded Chest"] = "0x13DB",   //0x13DB, 0x13E2
-            ["Studded Legs"] = "0x13DA",    //0x13DA, 0x13E1
+            ["Leather Gloves"] = "0x13C6",
+            ["Leather Cap"] = "0x1DB9",
+            ["Studded Chest"] = "0x13DB",
+            ["Studded Legs"] = "0x13DA",
             ["Studded Gorget"] = "0x13D6",
-            ["Studded Gloves"] = "0x13D5",  //0x13D5, 0x13DD
-
-            ["Bone Helm"] = "0x1451",       //0x1451, 0x1456
-            ["Bone Chest"] = "0x144F",      //0x144F, 0x1454
-            ["Bone Arms"] = "0x144E",       //0x144E, 0x1453
-            ["Bone Gloves"] = "0x1450",     //0x1450, 0x1455
-            ["Bone Legs"] = "0x1452",       //0x1452, 0x1457
-
-            ["Dragon Helm"] = "0x2645",     //0x2645, 0x2646
-            ["Dragon Chest"] = "0x2641",    //0x2641, 0x2642
-            ["Dragon Arms"] = "0x2657",     //0x2657, 0x2658
-            ["Dragon Gloves"] = "0x2643",   //0x2643, 0x2644
-            ["Dragon Legs"] = "0x2647",     //0x2647, 0x2648
-
-            ["Tribal Mask"] = "0x1549",     //0x1549, 0x154A, 0x154B, 0x154C
-            ["Tribal Chest"] = "0x154C",    //0x154C, 0x1454
-            ["Tribal Arms"] = "0x144E",     //0x144E, 0x1453
-            ["Tribal Legs"] = "0x1452"      //0x1452, 0x1457
+            ["Studded Gloves"] = "0x13D5",
+            ["Bone Helm"] = "0x1451",
+            ["Bone Chest"] = "0x144F",
+            ["Bone Arms"] = "0x144E",
+            ["Bone Gloves"] = "0x1450",
+            ["Bone Legs"] = "0x1452",
+            ["Dragon Helm"] = "0x2645",
+            ["Dragon Chest"] = "0x2641",
+            ["Dragon Arms"] = "0x2657",
+            ["Dragon Gloves"] = "0x2643",
+            ["Dragon Legs"] = "0x2647",
+            ["Tribal Mask"] = "0x1549",
+            ["Tribal Chest"] = "0x154C",
+            ["Tribal Arms"] = "0x144E",
+            ["Tribal Legs"] = "0x1452"
         };
 
         // Map Tribal Mask types to ItemIDs
@@ -149,6 +167,28 @@ namespace ScriptGenie.Exporters
             return Regex.IsMatch(input, "^[a-zA-Z0-9]+$");
         }
 
+        // Helper method to map layer names to enums
+        private static string MapLayerToEnum(string layerType)
+        {
+            if (string.IsNullOrEmpty(layerType))
+                return "OuterTorso"; // Default layer
+
+            switch (layerType)
+            {
+                case "Neck": return "Neck";
+                case "Helm": return "Helmet";
+                case "Gloves": return "Gloves";
+                case "Arms": return "Arms";
+                case "InnerTorso": return "InnerTorso";
+                case "OuterTorso": return "OuterTorso";
+                case "InnerLegs": return "InnerLegs";
+                case "OuterLegs": return "OuterLegs";
+                case "Shoes": return "Shoes";
+                case "TwoHanded": return "TwoHanded";
+                default: return "OuterTorso"; // Default layer
+            }
+        }
+
         public static string GenerateScript(armorGenerator armorGen, string serverType, out bool containsProfanity)
         {
             string scriptName = armorGen.ScriptName;
@@ -157,9 +197,17 @@ namespace ScriptGenie.Exporters
             string resourceType = armorGen.ResourceType;
             string armorType = armorGen.ArmorType;
             string armorTypeDetails = armorGen.ArmorTypeDetails;
+            string layerType = armorGen.LayerType;
             decimal weight = armorGen.Weight;
             int armorHue = armorGen.ArmorHue;
             string lootType = armorGen.LootType;
+
+            // Get resistance values from the generator
+            int physicalResistance = armorGen.PhysicalResistance;
+            int fireResistance = armorGen.FireResistance;
+            int coldResistance = armorGen.ColdResistance;
+            int poisonResistance = armorGen.PoisonResistance;
+            int energyResistance = armorGen.EnergyResistance;
 
             // Check for profanity in both ScriptName and ArmorDisplayName
             containsProfanity = ContainsProfanity(scriptName) || ContainsProfanity(armorDisplayNameInput);
@@ -200,29 +248,26 @@ namespace ScriptGenie.Exporters
             // Get CraftResource based on ResourceType
             string craftResource = ResourceTypes.TryGetValue(resourceType, out var resource) ? resource : "CraftResource.RegularLeather";
 
+            // Get Layer based on LayerType
+            string layerEnum = MapLayerToEnum(layerType);
+
             string script = $@"using Server;
 using Server.Items;
-
 namespace Server.Items
 {{
     public class {scriptName} : BaseArmor
     {{
         public override string Name {{ get {{ return ""{armorDisplayName}""; }} }}
-
-        public override int BasePhysicalResistance {{ get {{ return 3; }} }}
-        public override int BaseFireResistance {{ get {{ return 3; }} }}
-        public override int BaseColdResistance {{ get {{ return 3; }} }}
-        public override int BasePoisonResistance {{ get {{ return 3; }} }}
-        public override int BaseEnergyResistance {{ get {{ return 3; }} }}
-
+        public override int BasePhysicalResistance {{ get {{ return {physicalResistance}; }} }}
+        public override int BaseFireResistance {{ get {{ return {fireResistance}; }} }}
+        public override int BaseColdResistance {{ get {{ return {coldResistance}; }} }}
+        public override int BasePoisonResistance {{ get {{ return {poisonResistance}; }} }}
+        public override int BaseEnergyResistance {{ get {{ return {energyResistance}; }} }}
         public override int InitMinHits {{ get {{ return 30; }} }}
         public override int InitMaxHits {{ get {{ return 40; }} }}
-
         public override int AosStrReq {{ get {{ return 20; }} }}
         public override int OldStrReq {{ get {{ return 10; }} }}
-
         public override int ArmorBase {{ get {{ return 22; }} }}
-
         public override ArmorMaterialType MaterialType {{ get {{ return {materialType}; }} }}
         public override CraftResource DefaultResource {{ get {{ return {craftResource}; }} }}
 
@@ -232,6 +277,7 @@ namespace Server.Items
             Weight = {weight};
             Hue = {armorHue};
             Name = ""{armorDisplayName}"";
+            Layer = Layer.{layerEnum};
             LootType = LootType.{lootType};
         }}
 
@@ -251,7 +297,6 @@ namespace Server.Items
         }}
     }}
 }}";
-
             return script;
         }
 
@@ -295,7 +340,6 @@ namespace Server.Items
                 saveFileDialog.Filter = "C# Script|*.cs";
                 saveFileDialog.Title = $"Save Armor Script for {serverType}";
                 saveFileDialog.FileName = $"{scriptName}_Script.cs";
-
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     System.IO.File.WriteAllText(saveFileDialog.FileName, script);
