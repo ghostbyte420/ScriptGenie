@@ -53,11 +53,11 @@ namespace ScriptGenie.Controls.ArmorGenerator
             ["Plate"] = new List<string> { "Plate Helm", "Plate Gorget", "Plate Chest", "Plate Arms", "Plate Gloves", "Plate Legs" },
             ["Chainmail"] = new List<string> { "Chain Chest", "Chain Legs", "Chain Coif" },
             ["Ringmail"] = new List<string> { "Ringmail Chest", "Ringmail Legs", "Ringmail Gloves" },
-            ["Studded"] = new List<string> { "Studded Chest", "Studded Legs", "Studded Gorget", "Studded Gloves" },
-            ["Leather"] = new List<string> { "Leather Chest", "Leather Legs", "Leather Gorget", "Leather Gloves", "Leather Cap" },
+            ["Studded"] = new List<string> { "Studded Chest", "Studded Legs", "Studded Gloves", "Studded Gorget" },
+            ["Leather"] = new List<string> { "Leather Chest", "Leather Legs", "Leather Gloves", "Leather Cap" },
             ["Bone"] = new List<string> { "Bone Helm", "Bone Chest", "Bone Arms", "Bone Gloves", "Bone Legs" },
             ["Dragon"] = new List<string> { "Dragon Helm", "Dragon Chest", "Dragon Arms", "Dragon Gloves", "Dragon Legs" },
-            ["Tribal"] = new List<string> { "Tribal Mask", "Tribal Chest", "Tribal Legs" }
+            ["Tribal"] = new List<string> { "Tribal Mask", "Tribal Chest", "Tribal Arms", "Tribal Legs" }
         };
 
         // Dictionary to map Plate Helm types to their ItemIDs
@@ -75,6 +75,34 @@ namespace ScriptGenie.Controls.ArmorGenerator
             ["Plate Helm 10 (0x1419)"] = "0x1419"
         };
 
+        // Dictionary to map Plate Chest types to their ItemIDs
+        private static readonly Dictionary<string, string> PlateChestItemIDs = new Dictionary<string, string>
+        {
+            ["Plate Chest 1 (0x1415)"] = "0x1415",
+            ["Plate Chest 2 (0x1416)"] = "0x1416"
+        };
+
+        // Dictionary to map Plate Arms types to their ItemIDs
+        private static readonly Dictionary<string, string> PlateArmsItemIDs = new Dictionary<string, string>
+        {
+            ["Plate Arms 1 (0x1410)"] = "0x1410",
+            ["Plate Arms 2 (0x1417)"] = "0x1417"
+        };
+
+        // Dictionary to map Plate Gloves types to their ItemIDs
+        private static readonly Dictionary<string, string> PlateGlovesItemIDs = new Dictionary<string, string>
+        {
+            ["Plate Gloves 1 (0x1414)"] = "0x1414",
+            ["Plate Gloves 2 (0x1418)"] = "0x1418"
+        };
+
+        // Dictionary to map Plate Legs types to their ItemIDs
+        private static readonly Dictionary<string, string> PlateLegsItemIDs = new Dictionary<string, string>
+        {
+            ["Plate Legs 1 (0x1411)"] = "0x1411",
+            ["Plate Legs 2 (0x141A)"] = "0x141A"
+        };
+
         // Dictionary to map Tribal Mask types to their ItemIDs
         private static readonly Dictionary<string, string> TribalMaskItemIDs = new Dictionary<string, string>
         {
@@ -82,6 +110,225 @@ namespace ScriptGenie.Controls.ArmorGenerator
             ["Tribal Mask 2 (0x154A)"] = "0x154A",
             ["Tribal Mask 3 (0x154B)"] = "0x154B",
             ["Tribal Mask 4 (0x154C)"] = "0x154C"
+        };
+
+        // Dictionary to map Chain Chest types to their ItemIDs
+        private static readonly Dictionary<string, string> ChainChestItemIDs = new Dictionary<string, string>
+        {
+            ["Chain Chest 1 (0x13BF)"] = "0x13BF",
+            ["Chain Chest 2 (0x13C4)"] = "0x13C4"
+        };
+
+        // Dictionary to map Chain Legs types to their ItemIDs
+        private static readonly Dictionary<string, string> ChainLegsItemIDs = new Dictionary<string, string>
+        {
+            ["Chain Legs 1 (0x13BE)"] = "0x13BE",
+            ["Chain Legs 2 (0x13C3)"] = "0x13C3"
+        };
+
+        // Dictionary to map Chain Coif types to their ItemIDs
+        private static readonly Dictionary<string, string> ChainCoifItemIDs = new Dictionary<string, string>
+        {
+            ["Chain Coif 1 (0x13BB)"] = "0x13BB",
+            ["Chain Coif 2 (0x13C0)"] = "0x13C0"
+        };
+
+        // Dictionary to map Ringmail Chest types to their ItemIDs
+        private static readonly Dictionary<string, string> RingmailChestItemIDs = new Dictionary<string, string>
+        {
+            ["Ringmail Chest 1 (0x13EC)"] = "0x13EC",
+            ["Ringmail Chest 2 (0x13ED)"] = "0x13ED"
+        };
+
+        // Dictionary to map Ringmail Legs types to their ItemIDs
+        private static readonly Dictionary<string, string> RingmailLegsItemIDs = new Dictionary<string, string>
+        {
+            ["Ringmail Legs 1 (0x13F0)"] = "0x13F0",
+            ["Ringmail Legs 2 (0x13F1)"] = "0x13F1"
+        };
+
+        // Dictionary to map Ringmail Gloves types to their ItemIDs
+        private static readonly Dictionary<string, string> RingmailGlovesItemIDs = new Dictionary<string, string>
+        {
+            ["Ringmail Gloves 1 (0x13EB)"] = "0x13EB",
+            ["Ringmail Gloves 2 (0x13F2)"] = "0x13F2"
+        };
+
+        // Dictionary to map Leather Chest types to their ItemIDs
+        private static readonly Dictionary<string, string> LeatherChestItemIDs = new Dictionary<string, string>
+        {
+            ["Leather Chest 1 (0x13CC)"] = "0x13CC",
+            ["Leather Chest 2 (0x13D3)"] = "0x13D3"
+        };
+
+        // Dictionary to map Leather Legs types to their ItemIDs
+        private static readonly Dictionary<string, string> LeatherLegsItemIDs = new Dictionary<string, string>
+        {
+            ["Leather Legs 1 (0x13CB)"] = "0x13CB",
+            ["Leather Legs 2 (0x13D2)"] = "0x13D2"
+        };
+
+        // Dictionary to map Leather Gloves types to their ItemIDs
+        private static readonly Dictionary<string, string> LeatherGlovesItemIDs = new Dictionary<string, string>
+        {
+            ["Leather Gloves 1 (0x13C6)"] = "0x13C6",
+            ["Leather Gloves 2 (0x13CE)"] = "0x13CE"
+        };
+
+        // Dictionary to map Leather Cap types to their ItemIDs
+        private static readonly Dictionary<string, string> LeatherCapItemIDs = new Dictionary<string, string>
+        {
+            ["Leather Cap 1 (0x1DB9)"] = "0x1DB9",
+            ["Leather Cap 2 (0x1DBA)"] = "0x1DBA"
+        };
+
+        // Dictionary to map Studded Chest types to their ItemIDs
+        private static readonly Dictionary<string, string> StuddedChestItemIDs = new Dictionary<string, string>
+        {
+            ["Studded Chest 1 (0x13DB)"] = "0x13DB",
+            ["Studded Chest 2 (0x13E2)"] = "0x13E2"
+        };
+
+        // Dictionary to map Studded Legs types to their ItemIDs
+        private static readonly Dictionary<string, string> StuddedLegsItemIDs = new Dictionary<string, string>
+        {
+            ["Studded Legs 1 (0x13DA)"] = "0x13DA",
+            ["Studded Legs 2 (0x13E1)"] = "0x13E1"
+        };
+
+        // Dictionary to map Studded Gloves types to their ItemIDs
+        private static readonly Dictionary<string, string> StuddedGlovesItemIDs = new Dictionary<string, string>
+        {
+            ["Studded Gloves 1 (0x13D5)"] = "0x13D5",
+            ["Studded Gloves 2 (0x13DD)"] = "0x13DD"
+        };
+
+        // Dictionary to map Bone Helm types to their ItemIDs
+        private static readonly Dictionary<string, string> BoneHelmItemIDs = new Dictionary<string, string>
+        {
+            ["Bone Helm 1 (0x1451)"] = "0x1451",
+            ["Bone Helm 2 (0x1456)"] = "0x1456"
+        };
+
+        // Dictionary to map Bone Chest types to their ItemIDs
+        private static readonly Dictionary<string, string> BoneChestItemIDs = new Dictionary<string, string>
+        {
+            ["Bone Chest 1 (0x144F)"] = "0x144F",
+            ["Bone Chest 2 (0x1454)"] = "0x1454"
+        };
+
+        // Dictionary to map Bone Arms types to their ItemIDs
+        private static readonly Dictionary<string, string> BoneArmsItemIDs = new Dictionary<string, string>
+        {
+            ["Bone Arms 1 (0x144E)"] = "0x144E",
+            ["Bone Arms 2 (0x1453)"] = "0x1453"
+        };
+
+        // Dictionary to map Bone Gloves types to their ItemIDs
+        private static readonly Dictionary<string, string> BoneGlovesItemIDs = new Dictionary<string, string>
+        {
+            ["Bone Gloves 1 (0x1450)"] = "0x1450",
+            ["Bone Gloves 2 (0x1455)"] = "0x1455"
+        };
+
+        // Dictionary to map Bone Legs types to their ItemIDs
+        private static readonly Dictionary<string, string> BoneLegsItemIDs = new Dictionary<string, string>
+        {
+            ["Bone Legs 1 (0x1452)"] = "0x1452",
+            ["Bone Legs 2 (0x1457)"] = "0x1457"
+        };
+
+        // Dictionary to map Dragon Helm types to their ItemIDs
+        private static readonly Dictionary<string, string> DragonHelmItemIDs = new Dictionary<string, string>
+        {
+            ["Dragon Helm 1 (0x2645)"] = "0x2645",
+            ["Dragon Helm 2 (0x2646)"] = "0x2646"
+        };
+
+        // Dictionary to map Dragon Chest types to their ItemIDs
+        private static readonly Dictionary<string, string> DragonChestItemIDs = new Dictionary<string, string>
+        {
+            ["Dragon Chest 1 (0x2641)"] = "0x2641",
+            ["Dragon Chest 2 (0x2642)"] = "0x2642"
+        };
+
+        // Dictionary to map Dragon Arms types to their ItemIDs
+        private static readonly Dictionary<string, string> DragonArmsItemIDs = new Dictionary<string, string>
+        {
+            ["Dragon Arms 1 (0x2657)"] = "0x2657",
+            ["Dragon Arms 2 (0x2658)"] = "0x2658"
+        };
+
+        // Dictionary to map Dragon Gloves types to their ItemIDs
+        private static readonly Dictionary<string, string> DragonGlovesItemIDs = new Dictionary<string, string>
+        {
+            ["Dragon Gloves 1 (0x2643)"] = "0x2643",
+            ["Dragon Gloves 2 (0x2644)"] = "0x2644"
+        };
+
+        // Dictionary to map Dragon Legs types to their ItemIDs
+        private static readonly Dictionary<string, string> DragonLegsItemIDs = new Dictionary<string, string>
+        {
+            ["Dragon Legs 1 (0x2647)"] = "0x2647",
+            ["Dragon Legs 2 (0x2648)"] = "0x2648"
+        };
+
+        // Dictionary to map Tribal Chest types to their ItemIDs
+        private static readonly Dictionary<string, string> TribalChestItemIDs = new Dictionary<string, string>
+        {
+            ["Tribal Chest 1 (0x144F)"] = "0x144F",
+            ["Tribal Chest 2 (0x1454)"] = "0x1454"
+        };
+
+        // Dictionary to map Tribal Arms types to their ItemIDs
+        private static readonly Dictionary<string, string> TribalArmsItemIDs = new Dictionary<string, string>
+        {
+            ["Tribal Arms 1 (0x144E)"] = "0x144E",
+            ["Tribal Arms 2 (0x1453)"] = "0x1453"
+        };
+
+        // Dictionary to map Tribal Legs types to their ItemIDs
+        private static readonly Dictionary<string, string> TribalLegsItemIDs = new Dictionary<string, string>
+        {
+            ["Tribal Legs 1 (0x1452)"] = "0x1452",
+            ["Tribal Legs 2 (0x1457)"] = "0x1457"
+        };
+
+        // Dictionary to map armor types to their corresponding item ID dictionaries
+        private static readonly Dictionary<string, Dictionary<string, string>> ArmorTypeItemIDMappings = new Dictionary<string, Dictionary<string, string>>
+        {
+            ["Plate Helm"] = PlateHelmItemIDs,
+            ["Plate Chest"] = PlateChestItemIDs,
+            ["Plate Arms"] = PlateArmsItemIDs,
+            ["Plate Gloves"] = PlateGlovesItemIDs,
+            ["Plate Legs"] = PlateLegsItemIDs,
+            ["Tribal Mask"] = TribalMaskItemIDs,
+            ["Chain Chest"] = ChainChestItemIDs,
+            ["Chain Legs"] = ChainLegsItemIDs,
+            ["Chain Coif"] = ChainCoifItemIDs,
+            ["Ringmail Chest"] = RingmailChestItemIDs,
+            ["Ringmail Legs"] = RingmailLegsItemIDs,
+            ["Ringmail Gloves"] = RingmailGlovesItemIDs,
+            ["Leather Chest"] = LeatherChestItemIDs,
+            ["Leather Legs"] = LeatherLegsItemIDs,
+            ["Leather Gloves"] = LeatherGlovesItemIDs,
+            ["Leather Cap"] = LeatherCapItemIDs,
+            ["Studded Chest"] = StuddedChestItemIDs,
+            ["Studded Legs"] = StuddedLegsItemIDs,
+            ["Studded Gloves"] = StuddedGlovesItemIDs,
+            ["Bone Helm"] = BoneHelmItemIDs,
+            ["Bone Chest"] = BoneChestItemIDs,
+            ["Bone Arms"] = BoneArmsItemIDs,
+            ["Bone Gloves"] = BoneGlovesItemIDs,
+            ["Bone Legs"] = BoneLegsItemIDs,
+            ["Dragon Helm"] = DragonHelmItemIDs,
+            ["Dragon Chest"] = DragonChestItemIDs,
+            ["Dragon Arms"] = DragonArmsItemIDs,
+            ["Dragon Gloves"] = DragonGlovesItemIDs,
+            ["Dragon Legs"] = DragonLegsItemIDs,
+            ["Tribal Chest"] = TribalChestItemIDs,
+            ["Tribal Arms"] = TribalArmsItemIDs,
+            ["Tribal Legs"] = TribalLegsItemIDs
         };
 
         private float zoomFactor = 1.0f;
@@ -133,7 +380,7 @@ namespace ScriptGenie.Controls.ArmorGenerator
             try
             {
                 // Load the background image from Resources.resx
-                backgroundImage = new Bitmap(Properties.Resources.bkd_003); // Replace 'armor_background' with the name of your resource
+                backgroundImage = new Bitmap(Properties.Resources.bkd_003); // Replace 'bkd_003' with the name of your resource
             }
             catch (Exception ex)
             {
@@ -150,13 +397,15 @@ namespace ScriptGenie.Controls.ArmorGenerator
         {
             armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.Items.Clear();
 
-            if (armorType == "Tribal Mask")
+            // Check if the selected armor type has multiple pieces
+            if (ArmorTypeItemIDMappings.TryGetValue(armorType, out var itemIDMappings))
             {
-                armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.Items.AddRange(TribalMaskItemIDs.Keys.ToArray());
+                armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.Items.AddRange(itemIDMappings.Keys.ToArray());
+                armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.Visible = true;
             }
-            else if (armorType == "Plate Helm")
+            else
             {
-                armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.Items.AddRange(PlateHelmItemIDs.Keys.ToArray());
+                armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.Visible = false;
             }
 
             if (armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.Items.Count > 0)
@@ -268,16 +517,7 @@ namespace ScriptGenie.Controls.ArmorGenerator
             string selectedArmorTypeDetails = armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.SelectedItem?.ToString();
             int hue = (int)armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkNumericUpDown_armorHue.Value;
 
-            if (selectedArmorType == "Tribal Mask" && selectedArmorTypeDetails != null)
-            {
-                var match = Regex.Match(selectedArmorTypeDetails, @"\((0x[0-9A-Fa-f]+)\)");
-                if (match.Success)
-                {
-                    int itemID = Convert.ToInt32(match.Groups[1].Value, 16);
-                    DisplayArtPreview(itemID, hue);
-                }
-            }
-            else if (selectedArmorType == "Plate Helm" && selectedArmorTypeDetails != null)
+            if (selectedArmorTypeDetails != null && ArmorTypeItemIDMappings.TryGetValue(selectedArmorType, out var itemIDMappings))
             {
                 var match = Regex.Match(selectedArmorTypeDetails, @"\((0x[0-9A-Fa-f]+)\)");
                 if (match.Success)
@@ -297,15 +537,7 @@ namespace ScriptGenie.Controls.ArmorGenerator
         {
             string selectedArmorType = armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkTextBox_armorType.SelectedItem?.ToString();
 
-            if (selectedArmorType == "Tribal Mask" || selectedArmorType == "Plate Helm")
-            {
-                InitializeArmorTypeDetailsComboBox(selectedArmorType);
-                armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.Visible = true;
-            }
-            else
-            {
-                armorGenerator_opacityPanel_darkTabControl_tabPage_armorConstructor_opacityPanel_controlA_darkComboBox_multipleArmorTypeList.Visible = false;
-            }
+            InitializeArmorTypeDetailsComboBox(selectedArmorType);
             UpdatePreview();
         }
 

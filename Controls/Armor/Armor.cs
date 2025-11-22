@@ -52,39 +52,48 @@ namespace ScriptGenie.Exporters
         // Map ArmorType to ItemID
         public static readonly Dictionary<string, string> ArmorTypeItemIDs = new Dictionary<string, string>
         {
-            ["Plate Helm"] = "0x1412",
-            ["Plate Gorget"] = "0x1411",
-            ["Plate Chest"] = "0x1415",
-            ["Plate Arms"] = "0x1414",
-            ["Plate Gloves"] = "0x1413",
-            ["Plate Legs"] = "0x1416",
-            ["Chain Chest"] = "0x13EB",
-            ["Chain Legs"] = "0x13F0",
-            ["Chain Coif"] = "0x1515",
-            ["Ringmail Chest"] = "0x13F5",
-            ["Ringmail Legs"] = "0x13F8",
-            ["Ringmail Gloves"] = "0x13EB",
-            ["Leather Chest"] = "0x13DB",
-            ["Leather Legs"] = "0x13DA",
-            ["Leather Gorget"] = "0x13C6",
-            ["Leather Gloves"] = "0x13C7",
-            ["Leather Cap"] = "0x1515",
-            ["Studded Chest"] = "0x13D6",
-            ["Studded Legs"] = "0x13DA",
-            ["Studded Gorget"] = "0x13BE",
-            ["Studded Gloves"] = "0x13C7",
-            ["Bone Helm"] = "0x1451",
-            ["Bone Chest"] = "0x144E",
-            ["Bone Arms"] = "0x144F",
-            ["Bone Gloves"] = "0x1450",
-            ["Bone Legs"] = "0x1452",
-            ["Dragon Helm"] = "0x2645",
-            ["Dragon Chest"] = "0x2646",
-            ["Dragon Arms"] = "0x2647",
-            ["Dragon Gloves"] = "0x2648",
-            ["Dragon Legs"] = "0x2649",
-            ["Tribal Chest"] = "0x153B",
-            ["Tribal Legs"] = "0x1537"
+            ["Plate Helm"] = "0x1408",      //0x1408, 0x1409, 0x140A, 0x140B, 0x140C, 0x140D, 0x140E, 0x140F, 0x1412, 0x1419
+            ["Plate Gorget"] = "0x1413",
+            ["Plate Chest"] = "0x1415",     //0x1415, 0x1416
+            ["Plate Arms"] = "0x1410",      //0x1410, 0x1417
+            ["Plate Gloves"] = "0x1413",    //0x1414, 0x1418   
+            ["Plate Legs"] = "0x1411",      //0x1411, 0x141A
+
+            ["Chain Chest"] = "0x13BF",     //0x13BF, 0x13C4
+            ["Chain Legs"] = "0x13BE",      //0x13BE, 0x13C3
+            ["Chain Coif"] = "0x13BB",      //0x13BB, 0x13C0
+
+            ["Ringmail Chest"] = "0x13EC",  //0x13EC, 0x13ED
+            ["Ringmail Legs"] = "0x13F0",   //0x13F0, 0x13F1
+            ["Ringmail Gloves"] = "0x13EB", //0x13EB, 0x13F2
+
+            ["Leather Chest"] = "0x13CC",   //0x13CC, 0x13D3
+            ["Leather Legs"] = "0x13CB",    //0x13CB, 0x13D2
+            ["Leather Gorget"] = "0x13C7",
+            ["Leather Gloves"] = "0x13C6",  //0x13C6, 0x13CE
+            ["Leather Cap"] = "0x1DB9",     //0x1DB9, 0x1DBA
+
+            ["Studded Chest"] = "0x13DB",   //0x13DB, 0x13E2
+            ["Studded Legs"] = "0x13DA",    //0x13DA, 0x13E1
+            ["Studded Gorget"] = "0x13D6",
+            ["Studded Gloves"] = "0x13D5",  //0x13D5, 0x13DD
+
+            ["Bone Helm"] = "0x1451",       //0x1451, 0x1456
+            ["Bone Chest"] = "0x144F",      //0x144F, 0x1454
+            ["Bone Arms"] = "0x144E",       //0x144E, 0x1453
+            ["Bone Gloves"] = "0x1450",     //0x1450, 0x1455
+            ["Bone Legs"] = "0x1452",       //0x1452, 0x1457
+
+            ["Dragon Helm"] = "0x2645",     //0x2645, 0x2646
+            ["Dragon Chest"] = "0x2641",    //0x2641, 0x2642
+            ["Dragon Arms"] = "0x2657",     //0x2657, 0x2658
+            ["Dragon Gloves"] = "0x2643",   //0x2643, 0x2644
+            ["Dragon Legs"] = "0x2647",     //0x2647, 0x2648
+
+            ["Tribal Mask"] = "0x1549",     //0x1549, 0x154A, 0x154B, 0x154C
+            ["Tribal Chest"] = "0x154C",    //0x154C, 0x1454
+            ["Tribal Arms"] = "0x144E",     //0x144E, 0x1453
+            ["Tribal Legs"] = "0x1452"      //0x1452, 0x1457
         };
 
         // Map Tribal Mask types to ItemIDs
